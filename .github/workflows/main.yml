@@ -24,6 +24,9 @@ jobs:
 
       - name: Install Behave
         run: pip install behave
+        
+      - name: Install Chromedriver_py
+        run: pip install chromedriver_py
       
       - name: Run tests
         run: behave behave_bdd/features/
