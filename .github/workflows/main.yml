@@ -23,7 +23,7 @@ jobs:
         run: sudo apt-get install xvfb
 
       - name: Install Behave
-        run: pip instal behave
+        run: pip install behave
       
       - name: Run tests
         run: behave
