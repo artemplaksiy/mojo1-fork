@@ -1,3 +1,5 @@
+from chromedriver_py import binary_path
+from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,7 +10,7 @@ import time
 
 def test_login_home_page_logout():
     try:
-        browser = webdriver.Chrome()
+        browser = webdriver.Chrome(service=Service(executable_path=binary_path))
         browser.get("https://lb11.mojosells.com/login/")
         wait = WebDriverWait(browser, 15)
         browser.implicitly_wait(15)
